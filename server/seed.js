@@ -9,12 +9,10 @@ const VIDEO_POOL = [
   "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
   "https://www.w3schools.com/html/movie.mp4",
   "https://videos.pexels.com/video-files/1093662/1093662-hd_1280_720_30fps.mp4",
-  "https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4",
-  "https://videos.pexels.com/video-files/5752729/5752729-hd_1920_1080_30fps.mp4",
-  "https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_25fps.mp4",
   "https://videos.pexels.com/video-files/2933375/2933375-hd_1920_1080_30fps.mp4",
   "https://videos.pexels.com/video-files/2169880/2169880-hd_1920_1080_30fps.mp4",
   "https://videos.pexels.com/video-files/2278095/2278095-hd_1920_1080_30fps.mp4",
+  "https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_25fps.mp4",
   "https://videos.pexels.com/video-files/3015527/3015527-hd_1920_1080_24fps.mp4",
 ];
 

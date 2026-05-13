@@ -37,10 +37,10 @@ export default function InnerModal({ videos, startIndex, onClose, onLikeChange }
       {/* Close */}
       <button
         onClick={onClose}
-        className="absolute top-5 right-5 text-white hover:text-pink-400 transition"
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 text-white hover:text-pink-400 transition w-10 h-10 rounded-full bg-black/40 sm:bg-transparent flex items-center justify-center"
         aria-label="Close"
       >
-        <X className="w-8 h-8" />
+        <X className="w-6 h-6 sm:w-8 sm:h-8" />
       </button>
 
       {/* Prev arrow */}
@@ -50,10 +50,10 @@ export default function InnerModal({ videos, startIndex, onClose, onLikeChange }
           goPrev();
         }}
         disabled={current === 0}
-        className="absolute left-6 z-10 w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center disabled:opacity-30 hover:scale-110 transition"
+        className="absolute left-2 sm:left-6 z-10 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white shadow-xl flex items-center justify-center disabled:opacity-30 hover:scale-110 transition"
         aria-label="Previous"
       >
-        <ArrowLeft className="w-6 h-6" />
+        <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* Next arrow */}
@@ -63,20 +63,20 @@ export default function InnerModal({ videos, startIndex, onClose, onLikeChange }
           goNext();
         }}
         disabled={current === videos.length - 1}
-        className="absolute right-6 z-10 w-14 h-14 rounded-full bg-white shadow-xl flex items-center justify-center disabled:opacity-30 hover:scale-110 transition"
+        className="absolute right-2 sm:right-6 z-10 w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white shadow-xl flex items-center justify-center disabled:opacity-30 hover:scale-110 transition"
         aria-label="Next"
       >
-        <ArrowRight className="w-6 h-6" />
+        <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
       {/* 3-up carousel: prev (dim, small) | active (focused, large) | next (dim, small) */}
       <div
-        className="relative flex items-center justify-center gap-6 w-full max-w-[1100px] h-[80vh]"
+        className="relative flex items-center justify-center gap-3 lg:gap-6 w-full max-w-[1100px] h-[90vh] sm:h-[80vh] px-12 sm:px-16 md:px-0"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Prev video (small, muted preview) */}
         <div
-          className="hidden md:block w-[220px] h-[75%] rounded-3xl overflow-hidden opacity-50 hover:opacity-80 scale-95 transition cursor-pointer bg-black"
+          className="hidden md:block w-[180px] lg:w-[220px] h-[75%] rounded-3xl overflow-hidden opacity-50 hover:opacity-80 scale-95 transition cursor-pointer bg-black"
           onClick={goPrev}
         >
           {prev && (
@@ -95,7 +95,7 @@ export default function InnerModal({ videos, startIndex, onClose, onLikeChange }
         </div>
 
         {/* Active focused card */}
-        <div className="w-[340px] md:w-[380px] h-[90%] shadow-2xl ring-1 ring-white/10 rounded-3xl overflow-hidden">
+        <div className="w-full max-w-[340px] md:max-w-[360px] lg:max-w-[380px] h-[90%] shadow-2xl ring-1 ring-white/10 rounded-3xl overflow-hidden">
           <VideoPlayer
             key={active._id}
             video={active}
@@ -108,7 +108,7 @@ export default function InnerModal({ videos, startIndex, onClose, onLikeChange }
 
         {/* Next video (small, muted preview) */}
         <div
-          className="hidden md:block w-[220px] h-[75%] rounded-3xl overflow-hidden opacity-50 hover:opacity-80 scale-95 transition cursor-pointer bg-black"
+          className="hidden md:block w-[180px] lg:w-[220px] h-[75%] rounded-3xl overflow-hidden opacity-50 hover:opacity-80 scale-95 transition cursor-pointer bg-black"
           onClick={goNext}
         >
           {next && (

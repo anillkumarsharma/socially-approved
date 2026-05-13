@@ -210,16 +210,16 @@ export default function VideoPlayer({ video, active, muted, onToggleMute, onLike
       )}
 
       {active && (
-        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col items-center gap-5 text-white z-10">
+        <div className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3 sm:gap-5 text-white z-10">
           <button onClick={handleLike} className="flex flex-col items-center group">
             <span
-              className={`w-12 h-12 rounded-full flex items-center justify-center transition-all ${
+              className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all ${
                 liked ? "bg-pink-500" : "bg-black/60 group-hover:bg-black/80"
               }`}
             >
-              <Heart className={`w-6 h-6 ${liked ? "fill-white" : ""}`} />
+              <Heart className={`w-5 h-5 sm:w-6 sm:h-6 ${liked ? "fill-white" : ""}`} />
             </span>
-            <span className="text-xs font-semibold mt-1 drop-shadow">{formatCount(likes)}</span>
+            <span className="text-[10px] sm:text-xs font-semibold mt-1 drop-shadow">{formatCount(likes)}</span>
           </button>
 
           <button
@@ -229,10 +229,10 @@ export default function VideoPlayer({ video, active, muted, onToggleMute, onLike
             }}
             className="flex flex-col items-center group"
           >
-            <span className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80">
-              <MessageCircle className="w-6 h-6" />
+            <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80">
+              <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
             </span>
-            <span className="text-xs font-semibold mt-1 drop-shadow">
+            <span className="text-[10px] sm:text-xs font-semibold mt-1 drop-shadow">
               {formatCount(commentCount)}
             </span>
           </button>
@@ -245,15 +245,15 @@ export default function VideoPlayer({ video, active, muted, onToggleMute, onLike
               }}
               className="flex flex-col items-center group"
             >
-              <span className="w-12 h-12 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80">
-                <Share2 className="w-6 h-6" />
+              <span className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 flex items-center justify-center group-hover:bg-black/80">
+                <Share2 className="w-5 h-5 sm:w-6 sm:h-6" />
               </span>
-              <span className="text-xs font-semibold mt-1 drop-shadow">{formatCount(shares)}</span>
+              <span className="text-[10px] sm:text-xs font-semibold mt-1 drop-shadow">{formatCount(shares)}</span>
             </button>
 
             {shareOpen && (
               <div
-                className="absolute right-14 top-0 bg-white rounded-2xl shadow-2xl p-2 flex flex-col gap-1 min-w-[160px] z-30"
+                className="absolute right-12 sm:right-14 top-0 bg-white rounded-2xl shadow-2xl p-2 flex flex-col gap-1 min-w-[150px] sm:min-w-[160px] z-30"
                 onClick={(e) => e.stopPropagation()}
               >
                 <SharePlatform
@@ -299,9 +299,9 @@ export default function VideoPlayer({ video, active, muted, onToggleMute, onLike
       )}
 
       {active && (
-        <div className="absolute inset-x-0 bottom-0 p-4 pr-20 bg-gradient-to-t from-black/80 to-transparent text-white">
-          <h3 className="text-lg font-bold leading-tight">{video.title}</h3>
-          <p className="text-xs text-white/80 mt-1 line-clamp-3">{video.description}</p>
+        <div className="absolute inset-x-0 bottom-0 p-3 sm:p-4 pr-16 sm:pr-20 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <h3 className="text-base sm:text-lg font-bold leading-tight">{video.title}</h3>
+          <p className="text-[11px] sm:text-xs text-white/80 mt-1 line-clamp-2 sm:line-clamp-3">{video.description}</p>
         </div>
       )}
 

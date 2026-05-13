@@ -48,16 +48,6 @@ export default function VideoCard({ video, onClick }) {
         }`}
       />
 
-      {/* Top gradient + creator badge */}
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/60 to-transparent" />
-      <div className="absolute top-2 left-2 sm:top-3 sm:left-3 flex items-center gap-1.5 sm:gap-2 text-white max-w-[85%]">
-        <img
-          src={video.avatar}
-          alt={video.creator}
-          className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/30 border border-white/40 object-cover flex-shrink-0"
-        />
-        <span className="text-[11px] sm:text-sm font-semibold drop-shadow truncate">{video.creator}</span>
-      </div>
     </button>
   );
 }
